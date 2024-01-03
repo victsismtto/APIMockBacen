@@ -18,6 +18,6 @@ public class TransactionsController {
             @RequestHeader(value = "issuerFrom") String issuerFrom,
             @RequestHeader(value = "numberFrom") String numberFrom) throws Exception {
 
-        return ResponseEntity.ok().body("Transaction between these to accounts were registerd with success!");
+        return ResponseEntity.ok().body("Transaction between these to accounts were registered with success!");
     }
 }
