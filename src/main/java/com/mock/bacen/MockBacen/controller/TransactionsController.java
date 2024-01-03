@@ -1,5 +1,6 @@
 package com.mock.bacen.MockBacen.controller;
 
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/transaction")
 public class TransactionsController {
 
+    @RateLimiter(name = "bacenEndpoint")
     @PostMapping("/informed")
     public ResponseEntity<String> transactionRegistered(
             @RequestHeader(value = "issuerTo") String issuerTo,

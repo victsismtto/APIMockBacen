@@ -1,2 +1,11 @@
 server:
   port: 8081
+
+resilience4j.ratelimiter:
+  instances:
+    bacenEndpoint:
+      limitForPeriod: 1000
+      limitRefreshPeriod: 1s
+      timeoutDuration: 3s
+      registerHealthIndicator: true
+      eventConsumerBufferSize: 100
