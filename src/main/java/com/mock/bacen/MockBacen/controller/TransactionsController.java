@@ -16,7 +16,8 @@ public class TransactionsController {
             @RequestHeader(value = "issuerTo") String issuerTo,
             @RequestHeader(value = "numberTo") String numberTo,
             @RequestHeader(value = "issuerFrom") String issuerFrom,
-            @RequestHeader(value = "numberFrom") String numberFrom) throws Exception {
+            @RequestHeader(value = "numberFrom") String numberFrom,
+            @RequestHeader(value = "transferAmount") String transferAmount) throws Exception {
 
         return ResponseEntity.ok().body("Transaction between these to accounts were registered with success!");
     }

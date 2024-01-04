@@ -16,6 +16,6 @@ public class TransactionControllerTest {
     void testTransactionController() {
 
         Assertions.assertDoesNotThrow(
-                () -> controller.transactionRegistered("issuerTo", "numberTo", "issuerFrom", "NumberFrom"));
+                () -> controller.transactionRegistered("issuerTo", "numberTo", "issuerFrom", "NumberFrom", "transferAmount"));
     }
 }
