@@ -2,6 +2,7 @@ package com.mock.bacen.MockBacen.controller;
 
 import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +20,7 @@ public class TransactionsController {
             @RequestHeader(value = "numberFrom") String numberFrom,
             @RequestHeader(value = "transferAmount") String transferAmount) throws Exception {
 
+//        return ResponseEntity.status(HttpStatus.TOO_MANY_REQUESTS).body("TOO MANY REQUESTS!");
         return ResponseEntity.ok().body("Transaction between these to accounts were registered with success!");
     }
 }
